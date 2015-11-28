@@ -1,17 +1,27 @@
 #include <iostream>
 #include <fstream>
+#include <vector>
 #include "group.h"
 using namespace std;
 int main()
 {
-    ofstream myfile;
-      myfile.open ("Persons.txt");
-      if(myfile.fail())
-      {
-          cout << "Hallo!";
-      }
-      myfile << "Writing this to a file.\n";
-      myfile.close();
+    vector<string> v;
+    ifstream in_stream;
+        in_stream.open("Persons.txt");
+        if(in_stream.fail())
+        {
+            cout << "What the hell you suck";
+        }
+        string next;
+        while(in_stream >> next)
+        {
+            v.push_back(next);
+        }
+        in_stream.close();
+        for(unsigned int i = 0;i < v.size();i++)
+        {
+            cout << v[i] << " " << endl;
+        }
     return 0;
 }
 
