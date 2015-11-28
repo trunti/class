@@ -7,7 +7,7 @@ int main()
 {
     vector<string> v;
     ifstream in_stream;
-        in_stream.open("person.txt");
+        in_stream.open("Person.txt");
         if(in_stream.fail())
         {
             cout << "What the hell you suck";
