@@ -20,5 +20,6 @@ int main()
     }
     in_stream.close();
     cout << vect[1];
+
 }
 
